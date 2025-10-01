@@ -49,7 +49,7 @@ const Index = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Calculate Anything,
                 <br />
-                <span className="bg-clip-text text-transparent gradient-primary">
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
                   Instantly & Precisely
                 </span>
               </h1>
@@ -107,7 +107,7 @@ const Index = () => {
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium">10 Categories</span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent gradient-primary">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Explore by Category
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -142,7 +142,7 @@ const Index = () => {
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 animate-fade-in">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent gradient-primary">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Featured Calculators
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -177,7 +177,7 @@ const Index = () => {
                 <Zap className="h-4 w-4 text-primary animate-glow" />
                 <span className="text-sm font-medium">Start Calculating Today</span>
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent gradient-primary">
+              <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Ready to Calculate?
               </h2>
               <p className="text-xl text-muted-foreground">

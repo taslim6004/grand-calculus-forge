@@ -28,7 +28,7 @@ export const Header = () => {
             <div className="p-2 rounded-lg gradient-primary shadow-glow group-hover:shadow-premium transition-smooth">
               <Calculator className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold bg-clip-text text-transparent gradient-primary">
+            <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               UltimateCalcHub
             </span>
           </Link>
