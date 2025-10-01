@@ -46,7 +46,7 @@ const Index = () => {
                 <span className="text-sm font-medium">500+ Premium Calculators</span>
               </div>
               
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] pb-1">
                 Calculate Anything,
                 <br />
                 <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">

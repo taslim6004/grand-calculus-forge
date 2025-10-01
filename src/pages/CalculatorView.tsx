@@ -94,7 +94,7 @@ const CalculatorView = () => {
               </Button>
             </Link>
             <div className="max-w-4xl space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {calculator.name}
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
