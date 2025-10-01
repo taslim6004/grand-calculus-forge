@@ -107,7 +107,7 @@ const Index = () => {
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium">10 Categories</span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-5xl font-bold leading-[1.15] pb-1 mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Explore by Category
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -177,7 +177,7 @@ const Index = () => {
                 <Zap className="h-4 w-4 text-primary animate-glow" />
                 <span className="text-sm font-medium">Start Calculating Today</span>
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl font-bold leading-[1.15] pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Ready to Calculate?
               </h2>
               <p className="text-xl text-muted-foreground">
