@@ -64,7 +64,7 @@ const CategoryView = () => {
                   <span className="text-sm font-medium">{calculators.length} Calculators</span>
                 </div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent gradient-primary">
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {category.name}
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
