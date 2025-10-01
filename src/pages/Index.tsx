@@ -6,13 +6,33 @@ import { Footer } from "@/components/Footer";
 import { CategoryCard } from "@/components/CategoryCard";
 import { CalculatorCard } from "@/components/CalculatorCard";
 import { AdPlacement } from "@/components/AdPlacement";
+import { SEO } from "@/components/SEO";
 import { categories, calculators, getCalculatorsByCategory } from "@/data/calculators";
 
 const Index = () => {
   const featuredCalculators = calculators.slice(0, 6);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "UltimateCalcHub.com",
+    "url": "https://ultimatecalchub.com",
+    "description": "500+ professional calculators for math, finance, health, science, and more",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ultimatecalchub.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="500+ Professional Online Calculators - Free & Accurate"
+        description="Access 500+ premium calculators for math, finance, health, fitness, science, and more. Fast, accurate, and completely free. Trusted by millions worldwide."
+        keywords="calculator, online calculator, free calculator, math calculator, finance calculator, health calculator, BMI calculator, loan calculator, scientific calculator"
+        structuredData={structuredData}
+      />
       <Header />
       
       <main className="flex-1">

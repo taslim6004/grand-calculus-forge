@@ -2,11 +2,17 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CategoryCard } from "@/components/CategoryCard";
 import { AdPlacement } from "@/components/AdPlacement";
+import { SEO } from "@/components/SEO";
 import { categories, getCalculatorsByCategory } from "@/data/calculators";
 
 const Categories = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO 
+        title="All Calculator Categories - Browse 500+ Calculators"
+        description="Explore 10 comprehensive categories featuring 500+ professional calculators including math, finance, health, science, engineering, and more."
+        keywords="calculator categories, math calculators, finance calculators, health calculators, science calculators, engineering calculators"
+      />
       <Header />
       
       <main className="flex-1">
