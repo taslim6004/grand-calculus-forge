@@ -15,18 +15,16 @@ export const CategoryCard = ({ id, name, icon, count }: CategoryCardProps) => {
 
   return (
     <Link to={`/category/${id}`}>
-      <Card className="group hover:shadow-premium transition-smooth hover:-translate-y-1 cursor-pointer glass border-border/50">
+      <Card className="group cursor-pointer overflow-hidden glass hover:shadow-glow transition-smooth animate-fade-in">
         <CardContent className="p-6">
-          <div className="flex items-start gap-4">
-            <div className="p-3 rounded-lg gradient-primary group-hover:shadow-glow transition-smooth">
-              <Icon className="h-6 w-6 text-primary-foreground" />
+          <div className="flex items-center gap-4">
+            <div className="p-3 rounded-lg gradient-primary shadow-glow group-hover:shadow-premium group-hover:scale-110 transition-smooth transform">
+              <Icon className="h-8 w-8 text-primary-foreground" />
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-lg mb-1 group-hover:text-primary transition-smooth">
-                {name}
-              </h3>
+              <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-smooth">{name}</h3>
               <p className="text-sm text-muted-foreground">
-                {count} calculators available
+                {count} calculators
               </p>
             </div>
           </div>

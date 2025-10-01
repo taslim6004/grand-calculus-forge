@@ -81,9 +81,11 @@ const Index = () => {
                 { icon: Shield, label: "Accurate", value: "100%" },
                 { icon: Sparkles, label: "Free to Use", value: "Always" },
               ].map((stat, i) => (
-                <div key={i} className="glass rounded-xl p-4 text-center hover:shadow-card transition-smooth animate-scale-in" style={{ animationDelay: `${i * 100}ms` }}>
-                  <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
-                  <p className="text-sm font-semibold">{stat.value}</p>
+                <div key={i} className="glass-strong rounded-xl p-6 text-center hover:shadow-glow hover:-translate-y-2 transition-smooth animate-scale-in transform" style={{ animationDelay: `${i * 100}ms` }}>
+                  <div className="p-2 rounded-lg gradient-primary shadow-glow mx-auto w-fit mb-3">
+                    <stat.icon className="h-6 w-6 text-primary-foreground" />
+                  </div>
+                  <p className="text-sm font-bold">{stat.value}</p>
                   <p className="text-xs text-muted-foreground">{stat.label}</p>
                 </div>
               ))}
@@ -97,13 +99,18 @@ const Index = () => {
         </div>
 
         {/* Categories Section */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-20 bg-muted/30 relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-12 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-primary/20 mb-6">
+                <Sparkles className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium">10 Categories</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent gradient-primary">
                 Explore by Category
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Browse through our carefully organized categories to find the perfect calculator for your needs
               </p>
             </div>
@@ -132,13 +139,13 @@ const Index = () => {
         </section>
 
         {/* Featured Calculators */}
-        <section className="py-16">
+        <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="text-center mb-12 animate-fade-in">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent gradient-primary">
                 Featured Calculators
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Quick access to our most popular and useful calculators
               </p>
             </div>
@@ -162,17 +169,22 @@ const Index = () => {
         </div>
 
         {/* CTA Section */}
-        <section className="py-20 gradient-hero border-y border-border/40">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="max-w-3xl mx-auto space-y-6">
-              <h2 className="text-3xl md:text-5xl font-bold">
+        <section className="py-20 gradient-hero border-y border-border/40 relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div className="max-w-3xl mx-auto space-y-8 animate-scale-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-strong border border-primary/20 mb-4">
+                <Zap className="h-4 w-4 text-primary animate-glow" />
+                <span className="text-sm font-medium">Start Calculating Today</span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent gradient-primary">
                 Ready to Calculate?
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-xl text-muted-foreground">
                 Join millions of users who trust UltimateCalcHub for accurate, instant calculations
               </p>
               <Link to="/categories">
-                <Button variant="premium" size="xl" className="gap-2 group">
+                <Button variant="premium" size="xl" className="gap-2 group shadow-glow">
                   Get Started Now
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-smooth" />
                 </Button>

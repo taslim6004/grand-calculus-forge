@@ -3,6 +3,7 @@ import { Calculator, Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -56,8 +57,10 @@ export const Header = () => {
               <Search className="h-5 w-5" />
             </Button>
             
+            <ThemeToggle />
+            
             <Link to="/categories">
-              <Button variant="outline" size="sm" className="hidden sm:inline-flex">
+              <Button variant="outline" size="sm" className="hidden sm:inline-flex shadow-card hover:shadow-premium transition-smooth">
                 Categories
               </Button>
             </Link>

@@ -16,14 +16,16 @@ export const AdPlacement = ({ slot, format = "horizontal", className }: AdPlacem
   return (
     <div 
       className={cn(
-        "bg-muted/30 border border-border/50 rounded-lg flex items-center justify-center",
+        "rounded-xl border-2 border-dashed border-border/40 bg-muted/10 backdrop-blur-sm flex items-center justify-center transition-smooth hover:border-primary/30 shadow-card",
         formatClasses[format],
         className
       )}
     >
-      <div className="text-center space-y-2">
-        <p className="text-xs text-muted-foreground">Advertisement</p>
-        <p className="text-xs text-muted-foreground font-mono">Google Adsense Slot: {slot}</p>
+      <div className="text-center space-y-2 p-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted/50 border border-border/30">
+          <span className="text-xs font-medium text-muted-foreground">Ad Space</span>
+        </div>
+        <p className="text-xs text-muted-foreground/60 font-mono">Google Adsense: {slot}</p>
       </div>
     </div>
   );

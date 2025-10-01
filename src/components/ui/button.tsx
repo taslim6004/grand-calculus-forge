@@ -9,14 +9,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-card",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-card",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-card hover:shadow-premium transform hover:scale-[1.02] hover:-translate-y-0.5",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-card hover:shadow-premium",
+        outline: "border-2 border-border bg-card hover:bg-accent hover:text-accent-foreground shadow-card hover:shadow-premium transform hover:scale-[1.02]",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-card hover:shadow-premium transform hover:scale-[1.02] hover:-translate-y-0.5",
+        ghost: "hover:bg-accent hover:text-accent-foreground hover:shadow-card",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "gradient-primary text-primary-foreground hover:shadow-premium hover:scale-105 shadow-card font-semibold",
-        premium: "gradient-accent text-accent-foreground hover:shadow-glow hover:scale-105 shadow-card font-semibold",
+        hero: "gradient-primary text-primary-foreground hover:shadow-premium shadow-glow font-semibold transform hover:scale-[1.05] hover:-translate-y-1",
+        premium: "gradient-accent text-accent-foreground hover:shadow-glow shadow-premium font-semibold transform hover:scale-[1.05] hover:-translate-y-1",
       },
       size: {
         default: "h-10 px-4 py-2",

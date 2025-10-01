@@ -11,21 +11,18 @@ interface CalculatorCardProps {
 
 export const CalculatorCard = ({ name, description, slug }: CalculatorCardProps) => {
   return (
-    <Card className="group hover:shadow-card transition-smooth hover:-translate-y-1 h-full border-border/50">
-      <CardHeader>
-        <CardTitle className="text-lg group-hover:text-primary transition-smooth">
-          {name}
-        </CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Link to={`/calculator/${slug}`}>
-          <Button variant="ghost" size="sm" className="w-full justify-between group">
-            Open Calculator
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-smooth" />
-          </Button>
-        </Link>
-      </CardContent>
-    </Card>
+    <Link to={`/calculator/${slug}`}>
+      <Card className="group cursor-pointer h-full glass hover:shadow-glow transition-smooth animate-fade-in">
+        <CardHeader className="relative overflow-hidden">
+          <div className="absolute inset-0 gradient-hero opacity-0 group-hover:opacity-100 transition-smooth" />
+          <CardTitle className="text-lg group-hover:text-primary transition-smooth relative z-10 transform group-hover:translate-x-1">
+            {name}
+          </CardTitle>
+          <CardDescription className="line-clamp-2 relative z-10">
+            {description}
+          </CardDescription>
+        </CardHeader>
+      </Card>
+    </Link>
   );
 };

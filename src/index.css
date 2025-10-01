@@ -44,10 +44,11 @@ All colors MUST be HSL.
     --gradient-hero: linear-gradient(180deg, hsl(240 58% 56% / 0.05), hsl(280 45% 55% / 0.02));
     --gradient-accent: linear-gradient(135deg, hsl(45 100% 60%), hsl(35 100% 55%));
     
-    /* Premium shadows */
-    --shadow-premium: 0 20px 60px -15px hsl(240 58% 56% / 0.3);
-    --shadow-glow: 0 0 40px hsl(245 65% 68% / 0.4);
-    --shadow-card: 0 8px 30px -5px hsl(230 25% 12% / 0.1);
+    /* Premium shadows with 3D depth */
+    --shadow-premium: 0 20px 60px -15px hsl(240 58% 56% / 0.3), 0 10px 20px -10px hsl(240 58% 56% / 0.2);
+    --shadow-glow: 0 0 40px hsl(245 65% 68% / 0.4), 0 0 80px hsl(245 65% 68% / 0.2);
+    --shadow-card: 0 8px 30px -5px hsl(230 25% 12% / 0.1), 0 4px 15px -3px hsl(230 25% 12% / 0.05);
+    --shadow-3d: 0 10px 40px -10px hsl(240 58% 56% / 0.4), 0 0 0 1px hsl(var(--border)), inset 0 1px 0 hsl(var(--background) / 0.1);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -88,10 +89,11 @@ All colors MUST be HSL.
     --gradient-hero: linear-gradient(180deg, hsl(245 65% 68% / 0.08), hsl(280 50% 65% / 0.03));
     --gradient-accent: linear-gradient(135deg, hsl(45 100% 65%), hsl(35 100% 60%));
     
-    /* Dark shadows */
-    --shadow-premium: 0 20px 60px -15px hsl(245 65% 68% / 0.5);
-    --shadow-glow: 0 0 50px hsl(245 75% 75% / 0.6);
-    --shadow-card: 0 8px 30px -5px hsl(0 0% 0% / 0.3);
+    /* Dark shadows with 3D depth */
+    --shadow-premium: 0 20px 60px -15px hsl(245 65% 68% / 0.5), 0 10px 20px -10px hsl(245 65% 68% / 0.3);
+    --shadow-glow: 0 0 50px hsl(245 75% 75% / 0.6), 0 0 100px hsl(245 75% 75% / 0.3);
+    --shadow-card: 0 8px 30px -5px hsl(0 0% 0% / 0.3), 0 4px 15px -3px hsl(0 0% 0% / 0.2);
+    --shadow-3d: 0 10px 40px -10px hsl(245 65% 68% / 0.6), 0 0 0 1px hsl(var(--border)), inset 0 1px 0 hsl(var(--background) / 0.1);
   }
 }
 
@@ -139,6 +141,10 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-card);
   }
   
+  .shadow-3d {
+    box-shadow: var(--shadow-3d);
+  }
+  
   .transition-smooth {
     transition: var(--transition-smooth);
   }
@@ -147,5 +153,25 @@ All colors MUST be HSL.
     background: hsl(var(--card) / 0.7);
     backdrop-filter: blur(12px);
     border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  .glass-strong {
+    background: hsl(var(--card) / 0.9);
+    backdrop-filter: blur(20px);
+    border: 2px solid hsl(var(--border) / 0.3);
+  }
+  
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .depth-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
   }
 }
