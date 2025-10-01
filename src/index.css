@@ -17,11 +17,11 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 230 25% 12%;
 
-    --primary: 270 85% 35%;
+    --primary: 150 75% 32%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 280 80% 45%;
+    --primary-glow: 160 70% 38%;
     
-    --secondary: 260 75% 40%;
+    --secondary: 140 70% 35%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 20% 92%;
@@ -40,15 +40,15 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(270 85% 35%), hsl(260 75% 40%));
-    --gradient-hero: linear-gradient(180deg, hsl(270 85% 35% / 0.05), hsl(260 75% 40% / 0.02));
-    --gradient-accent: linear-gradient(135deg, hsl(270 85% 37%), hsl(260 75% 38%));
+    --gradient-primary: linear-gradient(135deg, hsl(150 75% 32%), hsl(140 70% 35%));
+    --gradient-hero: linear-gradient(180deg, hsl(150 75% 32% / 0.05), hsl(140 70% 35% / 0.02));
+    --gradient-accent: linear-gradient(135deg, hsl(150 75% 34%), hsl(140 70% 33%));
     
     /* Premium shadows with 3D depth */
-    --shadow-premium: 0 20px 60px -15px hsl(270 85% 35% / 0.4), 0 10px 20px -10px hsl(270 85% 35% / 0.3);
-    --shadow-glow: 0 0 40px hsl(280 80% 45% / 0.5), 0 0 80px hsl(280 80% 45% / 0.3);
+    --shadow-premium: 0 20px 60px -15px hsl(150 75% 32% / 0.4), 0 10px 20px -10px hsl(150 75% 32% / 0.3);
+    --shadow-glow: 0 0 40px hsl(160 70% 38% / 0.5), 0 0 80px hsl(160 70% 38% / 0.3);
     --shadow-card: 0 8px 30px -5px hsl(230 25% 12% / 0.1), 0 4px 15px -3px hsl(230 25% 12% / 0.05);
-    --shadow-3d: 0 10px 40px -10px hsl(270 85% 35% / 0.5), 0 0 0 1px hsl(var(--border)), inset 0 1px 0 hsl(var(--background) / 0.1);
+    --shadow-3d: 0 10px 40px -10px hsl(150 75% 32% / 0.5), 0 0 0 1px hsl(var(--border)), inset 0 1px 0 hsl(var(--background) / 0.1);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,11 +64,11 @@ All colors MUST be HSL.
     --popover: 230 25% 12%;
     --popover-foreground: 220 20% 95%;
 
-    --primary: 270 85% 55%;
+    --primary: 150 75% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 280 80% 65%;
+    --primary-glow: 160 70% 60%;
 
-    --secondary: 260 75% 58%;
+    --secondary: 140 70% 52%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 230 20% 18%;
@@ -85,15 +85,15 @@ All colors MUST be HSL.
     --ring: 245 65% 68%;
 
     /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(270 85% 55%), hsl(260 75% 58%));
-    --gradient-hero: linear-gradient(180deg, hsl(270 85% 55% / 0.08), hsl(260 75% 58% / 0.03));
-    --gradient-accent: linear-gradient(135deg, hsl(270 85% 57%), hsl(260 75% 57%));
+    --gradient-primary: linear-gradient(135deg, hsl(150 75% 50%), hsl(140 70% 52%));
+    --gradient-hero: linear-gradient(180deg, hsl(150 75% 50% / 0.08), hsl(140 70% 52% / 0.03));
+    --gradient-accent: linear-gradient(135deg, hsl(150 75% 52%), hsl(140 70% 50%));
     
     /* Dark shadows with 3D depth */
-    --shadow-premium: 0 20px 60px -15px hsl(270 85% 55% / 0.6), 0 10px 20px -10px hsl(270 85% 55% / 0.4);
-    --shadow-glow: 0 0 50px hsl(280 80% 65% / 0.7), 0 0 100px hsl(280 80% 65% / 0.4);
+    --shadow-premium: 0 20px 60px -15px hsl(150 75% 50% / 0.6), 0 10px 20px -10px hsl(150 75% 50% / 0.4);
+    --shadow-glow: 0 0 50px hsl(160 70% 60% / 0.7), 0 0 100px hsl(160 70% 60% / 0.4);
     --shadow-card: 0 8px 30px -5px hsl(0 0% 0% / 0.3), 0 4px 15px -3px hsl(0 0% 0% / 0.2);
-    --shadow-3d: 0 10px 40px -10px hsl(270 85% 55% / 0.7), 0 0 0 1px hsl(var(--border)), inset 0 1px 0 hsl(var(--background) / 0.1);
+    --shadow-3d: 0 10px 40px -10px hsl(150 75% 50% / 0.7), 0 0 0 1px hsl(var(--border)), inset 0 1px 0 hsl(var(--background) / 0.1);
   }
 }
 
