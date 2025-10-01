@@ -10,12 +10,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { getCalculatorBySlug } from "@/data/calculators";
 import { getCalculatorContent } from "@/utils/calculatorContent";
+import { getCalculatorTheme } from "@/utils/calculatorTheme";
 import { useState } from "react";
 
 const CalculatorView = () => {
   const { slug } = useParams();
   const calculator = slug ? getCalculatorBySlug(slug) : null;
   const content = slug ? getCalculatorContent(slug) : null;
+  const theme = slug ? getCalculatorTheme(slug) : null;
   const [result, setResult] = useState<string>("");
 
   // Sample calculator logic
@@ -94,7 +96,12 @@ const CalculatorView = () => {
               </Button>
             </Link>
             <div className="max-w-4xl space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold leading-[1.15] pb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h1 
+                className="text-4xl md:text-6xl font-bold leading-[1.15] pb-2 bg-clip-text text-transparent"
+                style={{ 
+                  backgroundImage: theme?.gradient 
+                }}
+              >
                 {calculator.name}
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -109,11 +116,22 @@ const CalculatorView = () => {
             {/* Main Calculator */}
             <div className="lg:col-span-2 space-y-8">
               {/* Calculator Card */}
-              <Card className="shadow-3d glass-strong animate-scale-in">
+              <Card 
+                className="shadow-3d glass-strong animate-scale-in"
+                style={{
+                  boxShadow: theme?.shadow
+                }}
+              >
                 <CardHeader className="border-b border-border/50 gradient-hero">
                   <CardTitle className="text-2xl flex items-center gap-3">
-                    <div className="p-2 rounded-lg gradient-primary shadow-glow">
-                      <TrendingUp className="h-6 w-6 text-primary-foreground" />
+                    <div 
+                      className="p-2 rounded-lg shadow-glow"
+                      style={{
+                        background: theme?.gradient,
+                        boxShadow: theme?.glow
+                      }}
+                    >
+                      <TrendingUp className="h-6 w-6 text-white" />
                     </div>
                     {content.title}
                   </CardTitle>
@@ -157,9 +175,22 @@ const CalculatorView = () => {
                   </Button>
 
                   {result && (
-                    <div className="p-8 rounded-xl glass-strong border-2 border-primary/30 animate-scale-in shadow-glow">
+                    <div 
+                      className="p-8 rounded-xl glass-strong border-2 animate-scale-in"
+                      style={{
+                        borderColor: `${theme?.primary}50`,
+                        boxShadow: theme?.glow
+                      }}
+                    >
                       <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wide">Result:</p>
-                      <p className="text-5xl font-bold leading-[1.2] pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{result}</p>
+                      <p 
+                        className="text-5xl font-bold leading-[1.2] pb-1 bg-clip-text text-transparent"
+                        style={{
+                          backgroundImage: theme?.gradient
+                        }}
+                      >
+                        {result}
+                      </p>
                     </div>
                   )}
                 </CardContent>
@@ -169,8 +200,14 @@ const CalculatorView = () => {
               <Card className="shadow-3d glass-strong animate-fade-in">
                 <CardHeader className="border-b border-border/50">
                   <CardTitle className="text-xl flex items-center gap-3">
-                    <div className="p-2 rounded-lg gradient-primary shadow-glow">
-                      <BookOpen className="h-5 w-5 text-primary-foreground" />
+                    <div 
+                      className="p-2 rounded-lg shadow-glow"
+                      style={{
+                        background: theme?.gradient,
+                        boxShadow: theme?.glow
+                      }}
+                    >
+                      <BookOpen className="h-5 w-5 text-white" />
                     </div>
                     How It Works
                   </CardTitle>
@@ -179,7 +216,13 @@ const CalculatorView = () => {
                   <ol className="space-y-4">
                     {content.howItWorks.map((step, index) => (
                       <li key={index} className="flex gap-4 items-start group">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full gradient-primary text-primary-foreground flex items-center justify-center font-bold shadow-glow group-hover:shadow-premium transition-smooth">
+                        <span 
+                          className="flex-shrink-0 w-8 h-8 rounded-full text-white flex items-center justify-center font-bold shadow-glow group-hover:shadow-premium transition-smooth"
+                          style={{
+                            background: theme?.gradient,
+                            boxShadow: theme?.glow
+                          }}
+                        >
                           {index + 1}
                         </span>
                         <p className="text-muted-foreground pt-1 leading-relaxed">{step}</p>
@@ -203,7 +246,12 @@ const CalculatorView = () => {
                   <ul className="space-y-4">
                     {content.tips.map((tip, index) => (
                       <li key={index} className="flex gap-3 items-start">
-                        <span className="flex-shrink-0 w-2 h-2 rounded-full bg-primary mt-2" />
+                        <span 
+                          className="flex-shrink-0 w-2 h-2 rounded-full mt-2"
+                          style={{
+                            backgroundColor: theme?.primary
+                          }}
+                        />
                         <p className="text-muted-foreground leading-relaxed">{tip}</p>
                       </li>
                     ))}
@@ -219,7 +267,19 @@ const CalculatorView = () => {
                 <CardContent className="pt-6">
                   <div className="space-y-4">
                     {content.examples.map((example, index) => (
-                      <div key={index} className="p-4 rounded-lg bg-muted/50 border border-border/50 hover:border-primary/50 transition-smooth">
+                      <div 
+                        key={index} 
+                        className="p-4 rounded-lg bg-muted/50 border border-border/50 transition-smooth hover:shadow-glow"
+                        style={{
+                          borderColor: `${theme?.primary}30`
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.borderColor = `${theme?.primary}80`;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.borderColor = `${theme?.primary}30`;
+                        }}
+                      >
                         <p className="text-sm leading-relaxed">{example}</p>
                       </div>
                     ))}
