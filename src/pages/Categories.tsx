@@ -25,7 +25,7 @@ const Categories = () => {
                 <Sparkles className="h-4 w-4 text-primary animate-glow" />
                 <span className="text-sm font-medium">10 Premium Categories</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.15] pb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 All Calculator Categories
               </h1>
               <p className="text-xl text-muted-foreground">

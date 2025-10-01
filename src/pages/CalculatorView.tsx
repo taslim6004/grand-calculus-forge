@@ -94,7 +94,7 @@ const CalculatorView = () => {
               </Button>
             </Link>
             <div className="max-w-4xl space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl font-bold leading-[1.1] pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold leading-[1.15] pb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 {calculator.name}
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -159,7 +159,7 @@ const CalculatorView = () => {
                   {result && (
                     <div className="p-8 rounded-xl glass-strong border-2 border-primary/30 animate-scale-in shadow-glow">
                       <p className="text-sm font-semibold text-muted-foreground mb-3 uppercase tracking-wide">Result:</p>
-                      <p className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{result}</p>
+                      <p className="text-5xl font-bold leading-[1.2] pb-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{result}</p>
                     </div>
                   )}
                 </CardContent>
