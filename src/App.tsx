@@ -11,6 +11,7 @@ import CategoryView from "./pages/CategoryView";
 import CalculatorView from "./pages/CalculatorView";
 import Popular from "./pages/Popular";
 import Search from "./pages/Search";
+import RecentlyAdded from "./pages/RecentlyAdded";
 import About from "./pages/About";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/calculator/:slug" element={<CalculatorView />} />
             <Route path="/popular" element={<Popular />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/recent" element={<RecentlyAdded />} />
             <Route path="/about" element={<About />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
